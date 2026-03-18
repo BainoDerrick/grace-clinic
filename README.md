@@ -1,68 +1,117 @@
-# CodeIgniter 4 Application Starter
+# Grace Medical Clinic Website
 
-## What is CodeIgniter?
+Grace Medical Clinic is a responsive multi-page clinic website built with CodeIgniter 4 and Tailwind CSS.
+It presents the clinic profile, available services, doctor information, and contact details for patients.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## Tech Stack
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+- PHP 8.1+
+- CodeIgniter 4
+- Tailwind CSS (CDN)
+- Font Awesome (CDN)
+- Vanilla JavaScript
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## Features
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+- Responsive desktop/mobile layout
+- Collapsible sidebar navigation
+- Floating WhatsApp quick-contact button
+- Dedicated pages for:
+  - Home
+  - About
+  - Services
+  - Doctors
+  - Contact
+- Google Maps embed and opening hours on contact page
 
-## Installation & updates
+## Application Routes
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+Defined in `app/Config/Routes.php`:
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+- `/` -> `Home::index`
+- `/about` -> `About::index`
+- `/services` -> `Services::index`
+- `/doctors` -> `Doctors::index`
+- `/contact` -> `Contact::index`
 
-## Setup
+## Project Structure
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+Key files used by this project:
 
-## Important Change with index.php
+- `app/Controllers/Home.php`
+- `app/Controllers/about.php`
+- `app/Controllers/services.php`
+- `app/Controllers/doctors.php`
+- `app/Controllers/contact.php`
+- `app/Views/header.php`
+- `app/Views/navbar.php`
+- `app/Views/home.php`
+- `app/Views/about.php`
+- `app/Views/services.php`
+- `app/Views/doctors.php`
+- `app/Views/contact.php`
+- `app/Views/footer.php`
+- `public/assets/css/style.css`
+- `public/assets/js/main.js`
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+## Local Setup
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+1. Install dependencies:
 
-**Please** read the user guide for a better explanation of how CI4 works!
+	```bash
+	composer install
+	```
 
-## Repository Management
+2. Create environment file:
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+	```bash
+	copy env .env
+	```
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+3. Update `.env` values as needed:
 
-## Server Requirements
+	- `app.baseURL` (example: `http://localhost:8080/`)
+	- Database settings if you add data-backed features
 
-PHP version 8.1 or higher is required, with the following extensions installed:
+4. Start the development server:
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+	```bash
+	php spark serve
+	```
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
+5. Open the app:
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+	- `http://localhost:8080`
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+## Running Tests
+
+Run test suite using Composer:
+
+```bash
+composer test
+```
+
+Or run PHPUnit directly:
+
+```bash
+vendor\\bin\\phpunit
+```
+
+## Deployment Notes
+
+- Web server document root must point to the `public/` directory.
+- Do not expose the project root directly.
+- In production, set:
+  - `CI_ENVIRONMENT = production`
+  - A secure `app.baseURL`
+
+## Planned Improvements
+
+- Add real appointment booking form with backend validation
+- Add admin panel for updating doctors and services
+- Add database-driven content management
+- Add automated UI and feature tests
+
+## License
+
+MIT
