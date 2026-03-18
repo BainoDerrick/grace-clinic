@@ -1,0 +1,101 @@
+/* Global Fix for Sticky Footer */
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Sidebar Default Width */
+#sidebar {
+    width: 16rem;
+    /* 256px */
+}
+
+/* DESKTOP BEHAVIOR */
+@media (min-width: 1024px) {
+
+    /* When collapsed on Desktop, make it narrow */
+    #sidebar.collapsed {
+        width: 5rem;
+    }
+
+    #sidebar.collapsed .sidebar-text {
+        display: none;
+    }
+
+    #sidebar.collapsed .nav-link {
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #main-wrapper.collapsed {
+        margin-left: 5rem;
+    }
+}
+
+/* MOBILE BEHAVIOR */
+@media (max-width: 1023px) {
+    #sidebar {
+        transform: translateX(-100%);
+        /* Hide off-screen */
+    }
+
+    /* When "active" on mobile, slide in */
+    #sidebar.mobile-active {
+        transform: translateX(0);
+    }
+
+    #main-wrapper {
+        margin-left: 0 !important;
+    }
+}
+
+/* WhatsApp Float */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+/* Utility to hide/show overlay */
+.overlay-active {
+    display: block !important;
+}
+
+@keyframes bounce-slow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-bounce-slow {
+    animation: bounce-slow 3s infinite ease-in-out;
+}
+
+/* For smooth bento grid hover */
+.group:hover .group-hover\:scale-110 {
+    transform: scale(1.1);
+}
+
+/* Smooth background transitions */
+section {
+    transition: background 0.5s ease;
+}
