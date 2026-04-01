@@ -53,6 +53,20 @@ require FCPATH . '../app/Config/Paths.php';
 
 $paths = new Paths();
 
+// Vercel serverless filesystem is read-only except temporary storage.
+if (getenv('VERCEL')) {
+    $tmpWritable = rtrim(sys_get_temp_dir(), DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . 'ci4-writable';
+
+    foreach (['', '/cache', '/debugbar', '/logs', '/session', '/uploads'] as $dir) {
+        $path = $tmpWritable . $dir;
+        if (! is_dir($path)) {
+            mkdir($path, 0775, true);
+        }
+    }
+
+    $paths->writableDirectory = $tmpWritable;
+}
+
 // LOAD THE FRAMEWORK BOOTSTRAP FILE
 require $paths->systemDirectory . '/Boot.php';
 

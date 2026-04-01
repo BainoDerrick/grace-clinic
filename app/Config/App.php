@@ -40,7 +40,27 @@ class App extends BaseConfig
      * something else. If you have configured your web server to remove this file
      * from your site URIs, set this variable to an empty string.
      */
-    public string $indexPage = 'index.php';
+    public string $indexPage = '';
+
+    public function __construct()
+    {
+        parent::__construct();
+
+        if (isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST'] !== '') {
+            $forwardedProto = $_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '';
+            $isHttps = (
+                (! empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+                || strtolower((string) $forwardedProto) === 'https'
+            );
+
+            $scheme = $isHttps ? 'https' : 'http';
+            $host = $_SERVER['HTTP_HOST'];
+
+            // Use the active deployment host so generated URLs are valid on Vercel.
+            $this->baseURL = $scheme . '://' . $host . '/';
+            $this->allowedHostnames = [$host];
+        }
+    }
 
     /**
      * --------------------------------------------------------------------------
