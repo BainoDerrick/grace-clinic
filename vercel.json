@@ -1,9 +1,6 @@
 {
     "version": 2,
     "buildCommand": "true",
-    "api": {
-        "nodeGroup": "default"
-    },
     "routes": [
         {
             "src": "/public/(.*)",
