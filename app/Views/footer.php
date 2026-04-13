@@ -16,6 +16,9 @@
                 </div>
                 <div>
                     <h4 class="text-white font-bold mb-2">Emergency</h4>
+                    <p class="text-blue-400 font-bold text-lg">+256 772 610 271</p>
+                    <p class="text-blue-400 font-bold text-lg">+256 702 530 782</p>
+                    <p class="text-blue-400 font-bold text-lg">+256 745 508 089</p>
                     <p class="text-blue-400 font-bold text-lg">+256 756 836 614</p>
                     <p class="text-blue-400 font-bold text-lg">+0392961402</p>
                 </div>
