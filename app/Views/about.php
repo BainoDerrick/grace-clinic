@@ -18,10 +18,10 @@
                 
                 <!-- Signature/Quote -->
                 <div class="mt-10 flex items-center gap-4">
-                    <img src="<?= base_url('assets/images/grace.png'); ?>" alt="Chief Medical Officer" class="w-16 h-16 rounded-full object-cover border-2 border-blue-100">
+                    <img src="<?= base_url('assets/images/sanyu.jpeg'); ?>" alt="Chief Medical Officer" class="w-16 h-16 rounded-full object-cover border-2 border-blue-100">
                     <div>
                         <p class="text-slate-900 font-bold italic">"Your health is the greatest wealth you can possess."</p>
-                        <p class="text-slate-500 text-sm">Dr. Grace , Doctor</p>
+                        <p class="text-slate-500 text-sm">Tubenawe Edrine , Senior Nursing Officer</p>
                     </div>
                 </div>
             </div>
@@ -136,8 +136,8 @@
                     </a>
                 </div>
                 <div class="grid grid-cols-2 gap-4">
-                    <img src="<?= base_url('assets/images/ward.jpg'); ?>" alt="Medical Ward" class="rounded-3xl h-64 w-full object-cover">
-                    <img src="<?= base_url('assets/images/theatre.jpg'); ?>" alt="Theater" class="rounded-3xl h-64 w-full object-cover mt-8">
+                    <img src="<?= base_url('assets/images/env1.jpeg'); ?>" alt="Patient Room" class="rounded-3xl h-64 w-full object-cover">
+                    <img src="<?= base_url('assets/images/env2.jpeg'); ?>" alt="Clinic Environment" class="rounded-3xl h-64 w-full object-cover mt-8">
                 </div>
             </div>
             <!-- Decorative circle -->

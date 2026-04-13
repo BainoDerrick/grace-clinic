@@ -44,7 +44,7 @@
                 </div>
                 <h3 class="text-xl font-bold text-slate-900 mb-2">Email Us</h3>
                 <p class="text-slate-500 mb-4 text-sm">For general inquiries.</p>
-                <a href="mailto:info@gracemedical.com" class="text-purple-600 font-bold hover:text-purple-700">info@gracemedical.com</a>
+                <a href="mailto:edrinetubenawe@gmail.com" class="text-purple-600 font-bold hover:text-purple-700">edrinetubenawe@gmail.com</a>
             </div>
 
             <!-- Location Card -->

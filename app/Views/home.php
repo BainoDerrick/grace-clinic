@@ -13,7 +13,7 @@
                 Good Health <span class="text-blue-600">Is Our Commitment.</span>
             </h1>
             <p class="text-lg text-slate-600 mb-10 leading-relaxed max-w-lg">
-                Experience the best healthcare around Kampala with a personal touch. Our specialists use medical technology to keep you and your family healthy.
+                Experience the best and affordable healthcare around Kampala with a personal touch. Our specialists use medical technology to keep you and your family healthy.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
                 <a href="https://wa.me/256772610271" class="bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold shadow-xl shadow-blue-200 hover:bg-blue-700 transition-all flex items-center justify-center gap-2">
@@ -44,7 +44,7 @@
         <!-- Hero Image Side -->
         <div class="relative">
             <div class="relative rounded-[2rem] overflow-hidden shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1678695972687-033fa0bdbac9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJsYWNrJTIwZmVtYWxlJTIwbnVyc2V8ZW58MHx8MHx8fDA%3D" alt="Doctor" class="w-full h-full object-cover">
+                <img src="<?= base_url('assets/images/lab.jpeg') ?>" alt="Doctor" class="w-full h-full object-cover">
             </div>
             <!-- Floating Card -->
             <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-50 hidden md:block animate-bounce-slow">
@@ -146,7 +146,7 @@
                 </div>
             </div>
             <div class="bg-slate-100 rounded-[3rem] p-4">
-                <img src="https://media.istockphoto.com/id/2254170161/photo/african-female-doctor-consults-with-a-male-patient-in-a-hospital-compassionate-and.jpg?s=612x612&w=0&k=20&c=HCgHfAf6PSd6xxY3Fnd-E0qcl-oaMlxWRNDAO2sRRPs=" class="rounded-[2.5rem] shadow-lg" alt="Clinic Interior">
+                <img src="<?= base_url('assets/images/care.jpeg') ?>" class="rounded-[2.5rem] shadow-lg" alt="Patient care">
             </div>
         </div>
     </div>
@@ -163,8 +163,8 @@
         </h2>
         <div class="flex items-center justify-center gap-4">
             <div class="text-left">
-                <p class="font-bold">Namuli Susan</p>
-                <p class="text-slate-400 text-sm">Mother</p>
+                <p class="font-bold">Bainomujuni Daphine</p>
+                <p class="text-slate-400 text-sm">Student</p>
             </div>
         </div>
     </div>
